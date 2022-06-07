@@ -1,0 +1,104 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run for ui e2e tests" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="utils.XrayListener"/>
+    </listeners>
+    <test name="Regression Test run for Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="92"/>
+        <classes>
+
+<!--            Fields-->
+            <class name="e2e.ui.pages.fields.FieldCreatePopupTest"/>
+            <class name="e2e.ui.pages.fields.FieldEditPopupTest"/>
+            <class name="e2e.ui.pages.fields.FieldsListPageTest"/>
+            <class name="e2e.ui.pages.fields.FieldViewDetailsPopupTest"/>
+
+<!--            Locations-->
+            <class name="e2e.ui.pages.locations.LocationListPageTest"/>
+            <class name="e2e.ui.pages.locations.LocationAvailabilityPageTest"/>
+            <class name="e2e.ui.pages.locations.CreateLocationPageTest"/>
+
+<!--            Resources-->
+            <class name="e2e.ui.pages.resources.ResourceCreatePopupTest"/>
+            <class name="e2e.ui.pages.resources.ResourceEditPopupTest"/>
+            <class name="e2e.ui.pages.resources.ResourceListPageTest"/>
+            <class name="e2e.ui.pages.resources.ResourceLocationsPageTest"/>
+            <class name="e2e.ui.pages.resources.ResourceServicesListPageTest"/>
+
+<!--            Services-->
+            <class name="e2e.ui.pages.services.CreateServicePageTest"/>
+            <class name="e2e.ui.pages.services.ServiceEditDetailsPageTest"/>
+            <class name="e2e.ui.pages.services.ServiceLocationsPageTest"/>
+            <class name="e2e.ui.pages.services.ServicesListPageTest"/>
+            <class name="e2e.ui.pages.services.ServiceViewDetailsPageTest"/>
+
+<!--            Users-->
+            <class name="e2e.ui.pages.users.UserDetailsPageTest"/>
+            <class name="e2e.ui.pages.users.UserLocationPageTest"/>
+            <class name="e2e.ui.pages.users.UserServicesListPageTest"/>
+            <class name="e2e.ui.pages.users.UsersListPageTest"/>
+
+            <class name="e2e.ui.pages.AppointmentsPageTest"/>
+            <class name="e2e.ui.pages.CreateOrganizationPageTest"/>
+            <class name="e2e.ui.pages.ForgotPasswordPageTest"/>
+            <class name="e2e.ui.pages.HeadersTest"/>
+            <class name="e2e.ui.pages.InvitationPageTest"/>
+            <class name="e2e.ui.pages.InviteUsersPageTest"/>
+            <class name="e2e.ui.pages.LoginPageTest"/>
+            <class name="e2e.ui.pages.OrganizationListPageTest"/>
+            <class name="e2e.ui.pages.OrganizationSettingsPageTest"/>
+            <class name="e2e.ui.pages.ResetPasswordPageTest"/>
+        </classes>
+    </test>
+    <test name="Regression Test run for Safari">
+        <parameter name="browser" value="safari"/>
+        <parameter name="version" value="14"/>
+        <classes>
+
+            <!--            Fields-->
+            <class name="e2e.ui.pages.fields.FieldCreatePopupTest"/>
+            <class name="e2e.ui.pages.fields.FieldEditPopupTest"/>
+            <class name="e2e.ui.pages.fields.FieldsListPageTest"/>
+            <class name="e2e.ui.pages.fields.FieldViewDetailsPopupTest"/>
+
+            <!--            Resources-->
+            <class name="e2e.ui.pages.resources.ResourceCreatePopupTest"/>
+            <class name="e2e.ui.pages.resources.ResourceEditPopupTest"/>
+            <class name="e2e.ui.pages.resources.ResourceListPageTest"/>
+            <class name="e2e.ui.pages.resources.ResourceLocationsPageTest"/>
+            <class name="e2e.ui.pages.resources.ResourceServicesListPageTest"/>
+
+            <!--            Locations-->
+            <class name="e2e.ui.pages.locations.LocationListPageTest"/>
+            <class name="e2e.ui.pages.locations.LocationAvailabilityPageTest"/>
+            <class name="e2e.ui.pages.locations.CreateLocationPageTest"/>
+
+            <!--            Services-->
+            <class name="e2e.ui.pages.services.CreateServicePageTest"/>
+            <class name="e2e.ui.pages.services.ServiceEditDetailsPageTest"/>
+            <class name="e2e.ui.pages.services.ServiceViewDetailsPageTest"/>
+            <class name="e2e.ui.pages.services.ServiceLocationsPageTest"/>
+            <class name="e2e.ui.pages.services.ServicesListPageTest"/>
+
+            <!--            Users-->
+            <class name="e2e.ui.pages.users.UserDetailsPageTest"/>
+            <class name="e2e.ui.pages.users.UserLocationPageTest"/>
+            <class name="e2e.ui.pages.users.UserServicesListPageTest"/>
+            <class name="e2e.ui.pages.users.UsersListPageTest"/>
+
+            <class name="e2e.ui.pages.AppointmentsPageTest"/>
+            <class name="e2e.ui.pages.CreateOrganizationPageTest"/>
+            <class name="e2e.ui.pages.ForgotPasswordPageTest"/>
+            <class name="e2e.ui.pages.HeadersTest"/>
+            <class name="e2e.ui.pages.InvitationPageTest"/>
+            <class name="e2e.ui.pages.InviteUsersPageTest"/>
+            <class name="e2e.ui.pages.LoginPageTest"/>
+            <class name="e2e.ui.pages.OrganizationListPageTest"/>
+            <class name="e2e.ui.pages.OrganizationSettingsPageTest"/>
+            <class name="e2e.ui.pages.ResetPasswordPageTest"/>
+        </classes>
+    </test>
+</suite>
+

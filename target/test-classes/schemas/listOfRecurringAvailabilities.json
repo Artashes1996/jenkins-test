@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "organizationId": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "string"
+          },
+          "resourceId": {
+            "type": "string"
+          },
+          "locationTimezone": {
+            "type": "string"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "enum": [
+              "SUNDAY",
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY"
+            ]
+          },
+          "fromTime": {
+            "type": "string"
+          },
+          "toTime": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "organizationId",
+          "id",
+          "locationId",
+          "resourceId",
+          "locationTimezone",
+          "dayOfWeek",
+          "fromTime",
+          "toTime"
+        ]
+      },
+      {
+        "type": "null"
+      }
+    ]
+  }
+}

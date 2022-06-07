@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "number"
+                  },
+                  "zipcode": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "linked": {
+            "type": "boolean"
+          },
+          "nameTranslation": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "PHYSICAL",
+              "VIRTUAL"
+            ]
+          }
+        },
+        "required": [
+          "address",
+          "deleted",
+          "id",
+          "internalName",
+          "linked",
+          "nameTranslation",
+          "phoneNumber",
+          "status",
+          "timezone",
+          "type"
+        ]
+      }
+    }
+  }
+}

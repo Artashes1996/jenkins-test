@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "organizationId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "providerId": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contactNumber": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["ACTIVE", "INACTIVE"]
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "lastModificationDate": {
+          "type": "string"
+        },
+        "inviterId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+
+      },
+      "required": [
+        "id",
+        "organizationId",
+        "email",
+        "status",
+        "creationDate",
+        "lastModificationDate"
+      ]
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "required": ["account", "token"]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "locationId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parentId": {
+      "type": "string"
+    },
+    "root": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "displayName",
+    "id",
+    "locationId",
+    "name",
+    "parentId",
+    "root"
+  ],
+  "additionalProperties": false
+}

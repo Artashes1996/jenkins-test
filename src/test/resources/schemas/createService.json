@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number",
+      "multipleOf": 1
+    },
+    "fieldLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "displayTo": {
+            "type": "string",
+            "enum": [
+              "STAFF_ONLY",
+              "EVERYONE"
+            ]
+          },
+          "fieldId": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "optional": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "number",
+            "multipleOf": 1
+          },
+          "serviceId": {
+            "type": "string"
+          },
+          "settingsId": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    "internalName": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "resourceSelection": {
+      "type": "string",
+      "enum": [
+        "DISABLED",
+        "ALLOWED",
+        "REQUIRED"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE"
+      ]
+    },
+    "visibility": {
+      "type": "object",
+      "properties": {
+        "monitor": {
+          "type": "boolean"
+        },
+        "physicalKiosk": {
+          "type": "boolean"
+        },
+        "webKiosk": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "webKiosk",
+        "physicalKiosk",
+        "monitor"
+      ]
+    },
+    "linkedLocationIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "internalName",
+    "nameTranslation",
+    "organizationId",
+    "visibility",
+    "duration",
+    "resourceSelection",
+    "status",
+    "fieldLinks",
+    "linkedLocationIds"
+  ],
+  "additionalItems": false
+}

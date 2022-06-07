@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "contactInfo": {
+      "type": "object",
+      "properties": {
+        "phoneNumber": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    "id": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "publicationDate": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PAUSED",
+        "LIVE"
+      ]
+    },
+    "vertical": {
+      "type": "string",
+      "enum": [
+        "EDUCATION",
+        "HEALTHCARE",
+        "GOVERNMENT",
+        "RETAIL_OTHER"
+      ]
+    },
+    "websiteUrl": {
+      "type": "string"
+    }
+  }
+}

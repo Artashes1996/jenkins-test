@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "children": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameTranslation": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array"
+              },
+              "isGroup": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "nameTranslation",
+              "isGroup"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "nameTranslation": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "ACTIVE",
+                  "INACTIVE"
+                ]
+              },
+              "duration": {
+                "type": "integer"
+              },
+              "resourceSelection": {
+                "type": "string",
+                "enum": [
+                  "ALLOWED",
+                  "REQUIRED",
+                  "DISABLED"
+                ]
+              },
+              "visibility": {
+                "type": "object",
+                "properties": {
+                  "monitor": {
+                    "type": "boolean"
+                  },
+                  "physicalKiosk": {
+                    "type": "boolean"
+                  },
+                  "webKiosk": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "isGroup": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "nameTranslation",
+              "status",
+              "duration",
+              "resourceSelection",
+              "visibility",
+              "isGroup"
+            ]
+          }
+        ]
+      }
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "isGroup": {
+      "type": "boolean"
+    }
+  }
+}

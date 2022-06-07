@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "createLocation.json"
+      }
+    },
+    "pageable": {
+      "type": "object",
+      "properties": {
+        "pageNumber": {
+          "type": "integer"
+        },
+        "pageSize": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      }
+    },
+    "totalPages": {
+      "type": "number"
+    },
+    "totalElements": {
+      "type": "number"
+    },
+    "numberOfElements": {
+      "type": "number"
+    },
+    "size": {
+      "type": "number"
+    },
+    "number": {
+      "type": "number"
+    },
+    "empty": {
+      "type": "boolean"
+    }
+  }
+}

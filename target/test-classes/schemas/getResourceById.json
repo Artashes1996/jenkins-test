@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "creationDate": {
+      "type": "string"
+    },
+    "type": {
+      "enum": ["OTHER", "EMPLOYEE"]
+    },
+    "status": {
+      "enum": ["ACTIVE", "INACTIVE"]
+    },
+    "linkedLocations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "internalName",
+    "nameTranslation",
+    "creationDate",
+    "type",
+    "status",
+    "linkedLocations"
+  ]
+}

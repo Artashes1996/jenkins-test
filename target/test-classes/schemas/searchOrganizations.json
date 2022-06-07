@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "deleted": {
+            "type": "boolean"
+          },
+          "deletionDate": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "imageUrl": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "numberOfLocations": {
+            "type": "number"
+          },
+          "numberOfUsers": {
+            "type": "number"
+          },
+          "phoneNumber": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publicationDate": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "LIVE",
+              "PAUSED",
+              "BLOCKED"
+            ]
+          },
+          "vertical": {
+            "type": "string",
+            "enum": [
+              "EDUCATION",
+              "HEALTHCARE",
+              "GOVERNMENT",
+              "RETAIL_OTHER"
+            ]
+          },
+          "websiteUrl": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "deleted",
+          "deletionDate",
+          "id",
+          "imageUrl",
+          "internalName",
+          "numberOfLocations",
+          "numberOfUsers",
+          "phoneNumber",
+          "publicationDate",
+          "status",
+          "vertical",
+          "websiteUrl"
+        ]
+      }
+    }
+  },
+  "required": [
+    "content",
+    "numberOfElements",
+    "totalPages"
+  ]
+}

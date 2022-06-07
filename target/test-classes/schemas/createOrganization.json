@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "const": "PAUSED"
+    },
+    "vertical": {
+      "type": "string",
+      "enum": [
+        "EDUCATION",
+        "GOVERNMENT",
+        "RETAIL_OTHER",
+        "HEALTHCARE"
+      ]
+    },
+    "websiteUrl": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "format": "uri"
+    },
+    "contactInfo": {
+      "type": "object",
+      "properties": {
+        "phoneNumber": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "contactInfo",
+    "id",
+    "imageUrl",
+    "internalName",
+    "pointsOfContact",
+    "publicationDate",
+    "status",
+    "vertical",
+    "websiteUrl"
+  ]
+}

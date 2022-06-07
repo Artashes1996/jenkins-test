@@ -1,0 +1,116 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run" verbose="10">
+
+    <listeners>
+        <listener class-name="utils.XrayListener"/>
+    </listeners>
+    <test name="Tests suite" parallel="methods" thread-count="15">
+        <classes>
+            <!--           Account Resource -->
+            <class name="e2e.gatewayapps.accountresource.AccountApplyRestoreTest"/>
+            <class name="e2e.gatewayapps.accountresource.AccountRestoreRequestTest"/>
+            <class name="e2e.gatewayapps.accountresource.ChangePasswordTest"/>
+            <class name="e2e.gatewayapps.accountresource.GetAccountByIdTest"/>
+            <class name="e2e.gatewayapps.accountresource.GetAccountRestoreTokenTest"/>
+            <class name="e2e.gatewayapps.accountresource.GetCurrentAccountTest"/>
+            <class name="e2e.gatewayapps.accountresource.GetResetPasswordByTokenTest"/>
+            <class name="e2e.gatewayapps.accountresource.LoginTest"/>
+            <class name="e2e.gatewayapps.accountresource.LogOutTest"/>
+            <class name="e2e.gatewayapps.accountresource.PasswordRequestForceResetTest"/>
+            <class name="e2e.gatewayapps.accountresource.PasswordResetTest"/>
+
+            <!--             Appointments resource-->
+            <class name="e2e.gatewayapps.appointmentsresource.GetAppointmentByIdTest"/>
+            <class name="e2e.gatewayapps.appointmentsresource.GetAppointmentByConfirmationCodeTest"/>
+            <class name="e2e.gatewayapps.appointmentsresource.GetListOfBasicLocationServicesTest"/>
+            <class name="e2e.gatewayapps.appointmentsresource.GetListOfBasicResourceUsersTest"/>
+
+            <!--            Available Time Slots resource-->
+            <class name="e2e.gatewayapps.availabletimeslots.GetListOfAvailableTimeSlotsTest"/>
+
+            <!--                        Field Resource-->
+            <class name="e2e.gatewayapps.fieldsresource.CreateFieldTest"/>
+            <class name="e2e.gatewayapps.fieldsresource.DeleteField"/>
+            <class name="e2e.gatewayapps.fieldsresource.EditCustomFieldsTest"/>
+            <class name="e2e.gatewayapps.fieldsresource.GetFieldByIdTest"/>
+            <class name="e2e.gatewayapps.fieldsresource.SearchFieldsTest"/>
+
+            <!--            Fixed availability resource-->
+            <class name="e2e.gatewayapps.fixedavailabilityresource.FixedAvailabilitiesUpsertTest"/>
+            <class name="e2e.gatewayapps.fixedavailabilityresource.MakeDateUnavailableTest"/>
+            <class name="e2e.gatewayapps.fixedavailabilityresource.SearchFixedAvailabilityTest"/>
+
+            <!--            Invitation Resource-->
+            <class name="e2e.gatewayapps.invitationresource.InvitationAcceptBySupportTest"/>
+            <class name="e2e.gatewayapps.invitationresource.InvitationAcceptTest"/>
+            <class name="e2e.gatewayapps.invitationresource.InvitationGetTest"/>
+            <class name="e2e.gatewayapps.invitationresource.InvitationSendTest"/>
+            <class name="e2e.gatewayapps.invitationresource.InvitationSendToSupportTest"/>
+            <class name="e2e.gatewayapps.invitationresource.ResendInvitationTest"/>
+
+            <!--            Locations Resource-->
+            <class name="e2e.gatewayapps.locationresource.ChangeLocationStatusTest"/>
+            <class name="e2e.gatewayapps.locationresource.GetLocationByIdTest"/>
+            <class name="e2e.gatewayapps.locationresource.LinkUnlinkServicesToLocationTest"/>
+            <class name="e2e.gatewayapps.locationresource.LocationCreateTest"/>
+            <class name="e2e.gatewayapps.locationresource.LocationsSearchTest"/>
+            <class name="e2e.gatewayapps.locationresource.SearchUserLinkedBasicLocations"/>
+            <class name="e2e.gatewayapps.locationresource.UpdateLocationTest"/>
+
+            <!--            Location Service Group Resource -->
+            <class name="e2e.gatewayapps.locationservicegroupresource.CreateLocationServiceGroupTest"/>
+            <class name="e2e.gatewayapps.locationservicegroupresource.GetLocationServiceGroupTest"/>
+            <class name="e2e.gatewayapps.locationservicegroupresource.UpdateLocationServiceGroupTest"/>
+
+            <!--            Location Service Link resource-->
+            <class name="e2e.gatewayapps.locationservicelinksresources.LocationServiceEditTest"/>
+            <class name="e2e.gatewayapps.locationservicelinksresources.LocationServiceLinksTest"/>
+            <class name="e2e.gatewayapps.locationservicelinksresources.LocationServiceSearchTest"/>
+
+            <!--            Organizations Resource-->
+            <class name="e2e.gatewayapps.organizationsresource.BlockUnblockOrganizationTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.CreateOrganizationsTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.DeleteOrganizationsTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.GetOrganizationByIdTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.OrganizationLogoDeleteTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.OrganizationLogoUploadTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.PauseUnpauseOrganizationTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.PublishOrganizationTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.RestoreOrganizationTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.SearchForOrganizationsTest"/>
+            <class name="e2e.gatewayapps.organizationsresource.UpdateOrganizationTest"/>
+
+            <!--            Recurring availability resource-->
+            <class name="e2e.gatewayapps.recurringavailabilitiesresource.GetRecurringAvailabilityTest"/>
+            <class name="e2e.gatewayapps.recurringavailabilitiesresource.RecurringAvailabilityCreationTest"/>
+
+            <!--            Services Resource-->
+            <class name="e2e.gatewayapps.serviceresource.GetServiceByIdTest"/>
+            <class name="e2e.gatewayapps.serviceresource.LinkLocationsToServiceTest"/>
+            <class name="e2e.gatewayapps.serviceresource.LocationLinkAwareServiceSearchTest"/>
+            <class name="e2e.gatewayapps.serviceresource.ServiceCreationTest"/>
+            <class name="e2e.gatewayapps.serviceresource.ServiceSearchTest"/>
+            <class name="e2e.gatewayapps.serviceresource.ServiceUpdateTest"/>
+
+            <!--            User Resource-->
+            <class name="e2e.gatewayapps.userresource.GetPreferredLocationTest"/>
+            <class name="e2e.gatewayapps.userresource.GetUserFullDetailsTest"/>
+            <class name="e2e.gatewayapps.userresource.SearchUsersLinkedLocationsTest"/>
+            <class name="e2e.gatewayapps.userresource.SetPreferredLocationTest"/>
+            <class name="e2e.gatewayapps.userresource.SupportUserDeleteTest"/>
+            <class name="e2e.gatewayapps.userresource.UserAvatarDeleteTest"/>
+            <class name="e2e.gatewayapps.userresource.UserAvatarUploadTest"/>
+            <class name="e2e.gatewayapps.userresource.UserDeleteTest"/>
+            <class name="e2e.gatewayapps.userresource.UserFilterTest"/>
+            <class name="e2e.gatewayapps.userresource.UserLinkedUnlinkedLocationServicesSearchTest"/>
+            <class name="e2e.gatewayapps.userresource.UserLinkUnlinkLocationServicesTest"/>
+            <class name="e2e.gatewayapps.userresource.UserLinkUnlinkToLocationTest"/>
+            <class name="e2e.gatewayapps.userresource.UserSearchTest"/>
+            <class name="e2e.gatewayapps.userresource.UserSortTest"/>
+            <class name="e2e.gatewayapps.userresource.UserUpdateCurrentTest"/>
+            <class name="e2e.gatewayapps.userresource.UserUpdateTest"/>
+        </classes>
+    </test>
+
+</suite>

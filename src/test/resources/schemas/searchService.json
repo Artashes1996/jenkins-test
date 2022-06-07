@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nameTranslation": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number",
+            "multipleOf": 1
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "organizationId": {
+            "type": "string"
+          },
+          "resourceSelection": {
+            "type": "string",
+            "enum": [
+              "DISABLED",
+              "ALLOWED",
+              "REQUIRED"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "visibility": {
+            "type": "object",
+            "properties": {
+              "monitor": {
+                "type": "boolean"
+              },
+              "physicalKiosk": {
+                "type": "boolean"
+              },
+              "webKiosk": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "webKiosk",
+              "physicalKiosk",
+              "monitor"
+            ]
+          }
+        }
+      }
+    },
+    "pageable": {
+      "type": "object",
+      "properties": {
+        "sort": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "direction": {
+                "type": "string"
+              },
+              "property": {
+                "type": "string"
+              },
+              "ignoreCase": {
+                "type": "boolean"
+              },
+              "nullHandling": {
+                "type": "string"
+              },
+              "ascending": {
+                "type": "boolean"
+              },
+              "descending": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "pageNumber": {
+          "type": "integer"
+        },
+        "pageSize": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "paged": {
+          "type": "boolean"
+        },
+        "unpaged": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "totalPages": {
+    "type": "integer"
+  },
+  "totalElements": {
+    "type": "integer"
+  },
+  "last": {
+    "type": "boolean"
+  },
+  "size": {
+    "type": "integer"
+  },
+  "number": {
+    "type": "integer"
+  },
+  "sort": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "direction": {
+          "type": "string"
+        },
+        "property": {
+          "type": "string"
+        },
+        "ignoreCase": {
+          "type": "boolean"
+        },
+        "nullHandling": {
+          "type": "string"
+        },
+        "ascending": {
+          "type": "boolean"
+        },
+        "descending": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "numberOfElements": {
+    "type": "integer"
+  },
+  "first": {
+    "type": "boolean"
+  },
+  "empty": {
+    "type": "boolean"
+  }
+}

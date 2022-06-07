@@ -1,0 +1,125 @@
+{
+  "schema": "https://json-scema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "addressLine1": {
+          "type": "string"
+        },
+        "addressLine2": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "country": {
+          "type": "string"
+        },
+        "stateRegion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "city": {
+          "type": "string"
+        },
+        "zipcode": {
+          "type": "string"
+        },
+        "latitude": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "longitude": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "addressLine1",
+        "country",
+        "city",
+        "zipcode"
+      ]
+    },
+    "phoneNumber": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE"
+      ]
+    },
+    "linked": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "internalName",
+    "nameTranslation",
+    "address",
+    "timezone",
+    "status"
+  ]
+}

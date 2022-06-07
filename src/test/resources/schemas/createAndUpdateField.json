@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "custom": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "internalName": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "regex": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "CHECKBOX",
+        "NUMBER",
+        "TEXT",
+        "RADIOBUTTON",
+        "MULTI_SELECT_DROPDOWN",
+        "SINGLE_SELECT_DROPDOWN"
+      ]
+    }
+  },
+  "required": [
+    "custom",
+    "id",
+    "internalName",
+    "displayName",
+    "organizationId",
+    "type"
+  ]
+}

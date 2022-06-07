@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "resourceId": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "firstName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "organizationId": {
+          "anyOf": [
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "providerId": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "contactNumber": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "userStatus": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "INACTIVE"
+          ]
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "invitationLastSentDate": {
+          "type": "string"
+        },
+        "invitationStatus": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "ACCEPTED",
+            "EXPIRED"
+          ]
+        },
+        "inviterId": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "roleLocationPayloads": {
+          "type": "object",
+          "properties": {
+            "locationId": {
+              "type": "string"
+            },
+            "roleInternalName": {
+              "type": "string",
+              "enum": [
+                "OWNER",
+                "ADMIN",
+                "LOCATION_ADMIN",
+                "STAFF"
+              ]
+            }
+          },
+          "required": [
+            "locationId",
+            "roleInternalName"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "resourceId",
+        "firstName",
+        "lastName",
+        "contactNumber",
+        "organizationId",
+        "email",
+        "userStatus",
+        "creationDate",
+        "invitationLastSentDate",
+        "invitationStatus",
+        "inviterId",
+        "roleLocationPayloads"
+      ]
+    },
+    "pageable": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "content",
+    "pageable",
+    "totalPages",
+    "totalElements"
+  ]
+}

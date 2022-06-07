@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "internalName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "creationDate": {
+      "type": "string"
+    },
+    "nameTranslation": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "linkedLocations": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "required": ["internalName", "id", "creationDate", "nameTranslation", "status", "type"]
+}

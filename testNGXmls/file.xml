@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run for ui e2e tests" parallel="methods" thread-count="3">
+    <listeners>
+        <listener class-name="utils.XrayListener"/>
+    </listeners>
+    <test name="Regression Test run for Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="92"/>
+<!--        <packages>-->
+<!--&lt;!&ndash;            <package name="e2e.gatewayapps.fieldsresource"></package>&ndash;&gt;-->
+<!--&lt;!&ndash;            <package name="e2e.gatewayapps.invitationresource"></package>&ndash;&gt;-->
+<!--&lt;!&ndash;            <package name="e2e.gatewayapps.locationservicegroupresource"></package>&ndash;&gt;-->
+<!--            <package name="e2e.gatewayapps.organizationsresource"></package>-->
+<!--&lt;!&ndash;            <package name="e2e.gatewayapps.userresource"></package>&ndash;&gt;-->
+<!--        </packages>-->
+        <classes>
+            <class name="e2e.ui.pages.OrganizationSettingsPageTest"></class>
+        </classes>
+    </test>
+</suite>
+

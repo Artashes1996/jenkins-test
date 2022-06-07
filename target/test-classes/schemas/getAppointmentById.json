@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "locationId": {
+      "type": "string"
+    },
+    "serviceId": {
+      "type": "string"
+    },
+    "resourceId": {
+      "type": "string"
+    },
+    "consumerId": {
+      "type": "string"
+    },
+    "consumerNotes": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "confirmationCode": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "DELAYED",
+        "ARRIVED",
+        "SERVING",
+        "COMPLETED",
+        "CANCELED",
+        "REJECTED",
+        "NO_SHOW"
+      ]
+    },
+    "creationDateTime": {
+      "type": "string"
+    },
+    "startDateTime": {
+      "type": "string"
+    },
+    "serviceDuration": {
+      "type": "number"
+    },
+    "actualDuration": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "resourceAssignmentMethod": {
+      "type": "string",
+      "enum": [
+        "MANUAL",
+        "AUTOMATED"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "WEB_KIOSK",
+        "PHYSICAL_KIOSK",
+        "CONSOLE"
+      ]
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "organizationId",
+    "locationId",
+    "serviceId",
+    "resourceId",
+    "consumerId",
+    "consumerNotes",
+    "confirmationCode",
+    "status",
+    "creationDateTime",
+    "startDateTime",
+    "serviceDuration",
+    "actualDuration",
+    "resourceAssignmentMethod",
+    "source",
+    "createdBy",
+    "fields"
+  ]
+}

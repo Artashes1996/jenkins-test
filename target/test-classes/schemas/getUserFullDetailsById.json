@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "invitationStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "ACCEPTED",
+        "EXPIRED"
+      ]
+    },
+    "inviterId": {
+      "type": "string"
+    },
+    "lastName": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "pointsOfContact": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "level": {
+              "type": "string",
+              "enum": [
+                "LOCATION",
+                "ORGANIZATION"
+              ]
+            },
+            "locationId": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "organizationId": {
+              "type": "string"
+            },
+            "responsibilityArea": {
+              "type": "string",
+              "enum": [
+                "ADMINISTRATIVE",
+                "TECHNICAL",
+                "BILLING",
+                "OTHER"
+              ]
+            },
+            "userId": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "AZURE",
+        "GOOGLE",
+        "QLESS"
+      ]
+    },
+    "roleLocationPayloads": {
+      "type": "array"
+    }
+  },
+  "userStatus": {
+    "type": "string",
+    "enum": [
+      "ACTIVE",
+      "INACTIVE"
+    ]
+  }
+}
